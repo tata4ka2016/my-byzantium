@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello, Tailwind</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-white-100">
+
+<!--
+  Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
+  Read the documentation to get started: https://tailwindui.com/documentation
+-->
+<div class="relative bg-gray-800 overflow-hidden">
+  <div class="hidden sm:block sm:absolute sm:inset-0">
+    <svg class="absolute bottom-0 right-0 transform translate-x-1/2 mb-48 text-gray-700 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0" width="364" height="384" viewBox="0 0 364 384" fill="none">
+      <defs>
+        <pattern id="eab71dd9-9d7a-47bd-8044-256344ee00d0" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="4" height="4" fill="currentColor" />
+        </pattern>
+      </defs>
+      <rect width="364" height="384" fill="url(#eab71dd9-9d7a-47bd-8044-256344ee00d0)" />
+    </svg>
+  </div>
+  <div class="relative pt-6 pb-12 sm:pb-32">
+    <nav class="relative max-w-screen-xl mx-auto flex items-center justify-between px-4 sm:px-6">
+      <div class="flex items-center flex-1">
+        <div class="flex items-center justify-between w-full md:w-auto">
+          <a href="#" aria-label="Home">
+            <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-on-dark.svg" alt="Logo">
+          </a>
+          <div class="-mr-2 flex items-center md:hidden">
+            <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:bg-gray-700 focus:outline-none focus:bg-gray-700 transition duration-150 ease-in-out" id="main-menu" aria-label="Main menu" aria-haspopup="true">
+              <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="hidden space-x-10 md:flex md:ml-10">
+          <a href="#" class="font-medium text-white hover:text-gray-300 transition duration-150 ease-in-out">Product</a>
+          <a href="#" class="font-medium text-white hover:text-gray-300 transition duration-150 ease-in-out">Features</a>
+          <a href="#" class="font-medium text-white hover:text-gray-300 transition duration-150 ease-in-out">Marketplace</a>
+          <a href="#" class="font-medium text-white hover:text-gray-300 transition duration-150 ease-in-out">Company</a>
+        </div>
+      </div>
+      <div class="hidden md:flex">
+        <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-gray-600 hover:bg-gray-500 focus:outline-none focus:shadow-outline-gray focus:border-gray-700 active:bg-gray-700 transition duration-150 ease-in-out">
+          Log in
+        </a>
+      </div>
+    </nav>
+
+    <!--
+      Mobile menu, show/hide based on menu open state.
+
+      Entering: "duration-150 ease-out"
+        From: "opacity-0 scale-95"
+        To: "opacity-100 scale-100"
+      Leaving: "duration-100 ease-in"
+        From: "opacity-100 scale-100"
+        To: "opacity-0 scale-95"
+    -->
+    <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+      <div class="rounded-lg shadow-md">
+        <div class="rounded-lg bg-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
+          <div class="px-5 pt-4 flex items-center justify-between">
+            <div>
+              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-on-white.svg" alt="">
+            </div>
+            <div class="-mr-2">
+              <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Close menu">
+                <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="space-y-1 px-2 pt-2 pb-3">
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Product</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Features</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Marketplace</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50 transition duration-150 ease-in-out" role="menuitem">Company</a>
+          </div>
+          <div>
+            <a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700 transition duration-150 ease-in-out" role="menuitem">
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="mt-8 sm:mt-16 md:mt-20 lg:mt-24">
+      <div class="mx-auto max-w-screen-xl">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+          <div class="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
+            <div>
+              
+              <h2 class="mt-4 text-4xl tracking-tight leading-10 font-extrabold text-white sm:mt-5 sm:leading-none sm:text-6xl lg:mt-6 lg:text-5xl xl:text-6xl">
+                Сайт и реклама
+                <br class="hidden md:inline">
+                <span class="text-indigo-400">для агентства недвижимости</span>
+              </h2>
+              <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                Получайте клиентов из интернета с помощью современного сайта и эффективной рекламы. Все инвестиции окупятся всего с одной средней сделки
+              </p>
+             
+            </div>
+          </div>
+          <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-span-6">
+            <div class="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
+              <div class="px-4 py-8 sm:px-10">
+              
+
+                <div class="mt-6 relative">
+                  <div class="absolute inset-0 flex items-center">
+                    <div class="w-full border-t border-gray-300"></div>
+                  </div>
+                  <div class="relative flex justify-center text-sm leading-5">
+                    <span class="px-2 bg-white text-gray-500">
+                      Or
+                    </span>
+                  </div>
+                </div>
+
+                <div class="mt-6">
+                  <form action="#" method="POST" class="space-y-6">
+                    <div>
+                      <label for="name" class="sr-only">
+                        Full name
+                      </label>
+                      <div class="rounded-md shadow-sm">
+                        <input id="name" placeholder="Full name" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
+                      </div>
+                    </div>
+
+                    <div>
+                      <label for="mobile-or-email" class="sr-only">
+                        Mobile number or email
+                      </label>
+                      <div class="rounded-md shadow-sm">
+                        <input id="mobile-or-email" placeholder="Mobile number or email" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
+                      </div>
+                    </div>
+
+                    <div>
+                      <label for="password" class="sr-only">
+                        Password
+                      </label>
+                      <div class="rounded-md shadow-sm">
+                        <input id="password" type="password" placeholder="Password" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
+                      </div>
+                    </div>
+
+                    <div>
+                      <span class="block w-full rounded-md shadow-sm">
+                        <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
+                          Create your account
+                        </button>
+                      </span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="px-4 py-6 bg-gray-50 border-t-2 border-gray-200 sm:px-10">
+                <p class="text-xs leading-5 text-gray-500">By signing up, you agree to our <a href="#" class="font-medium text-gray-900 hover:underline">Terms</a>, <a href="#" class="font-medium text-gray-900 hover:underline">Data Policy</a> and <a href="#" class="font-medium text-gray-900 hover:underline">Cookies Policy</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+
+<!-- Наши клиенты из недвижимости -->
+<div class="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+  <div class="absolute inset-0">
+    <div class="bg-white h-1/3 sm:h-2/3"></div>
+  </div>
+  <div class="relative max-w-7xl mx-auto ">
+    <div class="text-center">
+      <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
+        Наши клиенты из недвижимости
+      </h2>
+    
+    </div>
+    
+    
+  </div>
+  </div>
+<div class="mx-auto max-w-screen-xl">
+  <div class="absolute inset-0">
+    <div class="bg-white h-1/3 sm:h-2/3"></div>
+  </div>
+  <div class="relative max-w-7xl mx-auto">
+  
+    <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-4 lg:max-w-none">
+      <div class="flex flex-col shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-160px w-full object-cover" src="/image/atlas-logo-an-2_.webp" alt="" />
+        </div>
+        
+      </div>
+      <div class="flex flex-col  shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-160px w-full object-cover" src="/image/remax-new-logo.webp" alt="" />
+        </div>
+        
+      </div>
+      <div class="flex flex-col  shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-160px w-full object-cover" src="/image/prostranstvo-1.webp" alt="" />
+        </div>
+        
+      </div>
+      <div class="flex flex-col shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-160px w-full object-cover" src="/image/__2019-12-18__104553.webp" alt="" />
+        </div>
+        
+      </div>
+    </div>
+    <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-4 lg:max-w-none">
+      <div class="flex flex-col shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-160px w-full object-cover" src="/image/__2019-12-18__104246.webp" alt="" />
+        </div>
+        
+      </div>
+      <div class="flex flex-col shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-160px w-full object-cover" src="/image/__2019-12-18__103531.webp" alt="" />
+        </div>
+        
+      </div>
+      <div class="flex flex-col shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-160px w-full object-cover" src="/image/__2019-12-18__175532.webp" alt="" />
+        </div>
+        
+      </div>
+      <div class="flex flex-col shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-160px w-full object-cover" src="/image/__2019-12-18__113211.webp" alt="" />
+        </div>
+        
+      </div>
+    </div>
+    <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-4 lg:max-w-none">
+      <div class="flex flex-col shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-160px w-full object-cover" src="/image/__2019-12-18__105041.webp" alt="" />
+        </div>
+        
+      </div>
+      <div class="flex flex-col shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-160px w-full object-cover" src="/image/logo-1.jpg" alt="" />
+        </div>
+        
+      </div>
+      <div class="flex flex-col shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-160px w-full object-cover" src="/image/File.webp" alt="" />
+        </div>
+        
+      </div>
+      <div class="flex flex-col shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-160px w-full object-cover" src="/image/logo.webp" alt="" />
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+<!-- Стоимость пакета -->
+
+<div class="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+  <div class="absolute inset-0">
+    <div class="bg-white h-1/3 sm:h-2/3"></div>
+  </div>
+  <div class="relative max-w-7xl mx-auto ">
+    <div class="text-center">
+      <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
+        Стоимость пакета
+      </h2>
+    
+    </div>
+    
+    
+  </div>
+  </div>
+  <div class="bg-gray-50">
+    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      
+      <div class="mt-6 border-t-2 border-gray-200 pt-6">
+        <dl>
+         <div class="md:grid md:grid-cols-12 md:gap-8">
+          <dt class="text-base leading-6 font-medium text-gray-900 md:col-span-3 ">
+            САЙТ
+          </dt>
+          <dd class="mt-2 md:mt-0 md:col-span-6">
+            <p class="text-base leading-6 text-gray-500">
+              — Поиск и фильтрация всех типов объектов</br>
+              — Маркетинговые инструменты для роста конверсии</br>
+              — Отдельные страницы филиалов и риелторов</br>
+              — Быстрая работа сайта</br>
+              — Выгрузка объектов на некоторые сайты объявлений
+            </p>
+          </dd>
+          <dt class="text-base leading-6 font-medium text-gray-900 md:col-span-3">
+            1500$
+          </dt>
+          </div>
+          <div class="mt-8 border-t border-gray-200 pt-6 md:grid md:grid-cols-12 md:gap-8">
+            <dt class="text-base leading-6 font-medium text-gray-900 md:col-span-3 ">
+              РЕКЛАМА
+            </dt>
+            <dd class="mt-2 md:mt-0 md:col-span-6">
+              <p class="text-base leading-6 text-gray-500">
+                — Настройка рекламы в Google и месяц ведения</br>
+                — Оптимизация сайта для Google</br>
+                — Настройка рекламы в Facebook и месяц ведения</br>
+              </p>
+            </dd>
+            <dt class="text-base leading-6 font-medium text-gray-900 md:col-span-3">
+              1000$
+            </dt>
+          </div>
+          <div class="mt-8 border-t border-gray-200 pt-6 md:grid md:grid-cols-12 md:gap-8">
+            <dt class="text-base leading-6 font-medium text-gray-900 md:col-span-3 ">
+              CRM
+            </dt>
+            <dd class="mt-2 md:mt-0 md:col-span-6">
+              <p class="text-base leading-6 text-gray-500">
+                — Специальная настройка AmoCRM под ваши нужды</br>
+                — 6 часов личного обучения</br>
+                — 2 месяца поддержки</br>
+                — Получения всех заявок из рекламы в одном месте
+              </p>
+            </dd>
+            <dt class="text-base leading-6 font-medium text-gray-900 md:col-span-3">
+              500$
+            </dt>
+          </div>
+         
+          
+        
+        
+        </dl>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bg-white">
+    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+        Рассрочка
+      </h2>
+      <p class="mt-3 max-w-3xl text-lg leading-6 text-gray-300">
+        Для агентств без филиалов у нас есть бонус
+      </p>
+      <form class="mt-8 sm:flex" aria-labelledby="newsletter-headline">
+       
+
+        <div>
+       
+          <div class="mt-1 relative rounded-md shadow-sm">
+            <input id="phone_number" class="form-input py-3 px-4 block w-full pl-20 transition ease-in-out duration-150" placeholder="Ваше имя" />
+          </div>
+        </div>
+
+
+<!-- Получить предложение форма -->
+
+        <div>
+       
+          <div class="mt-1 relative rounded-md shadow-sm">
+            <input id="phone_number" class="form-input py-3 px-4 block w-full pl-20 transition ease-in-out duration-150" placeholder="+38 (99) 999-99-99" />
+          </div>
+        </div>
+        <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+          <button class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
+            Получить предложение
+
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+<!-- Примеры сайтов -->
+
+  <div class="mx-auto max-w-screen-xl">
+    <div class="absolute inset-0">
+      <div class="bg-white h-1/3 sm:h-2/3"></div>
+    </div>
+    <div class="relative max-w-7xl mx-auto">
+      <div class="text-center">
+        <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
+          Примеры сайтов
+        </h2>
+      
+      </div>
+      <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+        <div class="flex flex-col shadow-lg overflow-hidden">
+          <div class="flex-shrink-0">
+            <img class="h-290px w-full object-cover" src="/image/atlas-site.png" alt="" />
+          </div>
+          
+        </div>
+        <div class="flex flex-col  shadow-lg overflow-hidden">
+          <div class="flex-shrink-0">
+            <img class="h-290px w-full object-cover" src="/image/sabai-site.png" alt="" />
+          </div>
+          
+        </div>
+        <div class="flex flex-col  shadow-lg overflow-hidden">
+          <div class="flex-shrink-0">
+            <img class="h-290px w-full object-cover" src="/image/newestate-site.png" alt="" />
+          </div>
+          
+        </div>
+       
+      </div>
+      <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+        <div class="flex flex-col shadow-lg overflow-hidden">
+          <div class="flex-shrink-0">
+            <img class="h-290px w-full object-cover" src="/image/uachts-site.png" alt="" />
+          </div>
+          
+        </div>
+        <div class="flex flex-col  shadow-lg overflow-hidden">
+          <div class="flex-shrink-0">
+            <img class="h-290px w-full object-cover" src="/image/blackseavilla-site.png" alt="" />
+          </div>
+          
+        </div>
+        <div class="flex flex-col shadow-lg overflow-hidden">
+          <div class="flex-shrink-0">
+            <img class="h-290px w-full object-cover" src="/image/soon-site.jpg" alt="" />
+          </div>
+          
+        </div>
+ 
+      </div>
+    
+    </div>
+  
+  
+  </div>
+
+  <!-- О компании -->
+
+
+<!--
+  Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
+  Read the documentation to get started: https://tailwindui.com/documentation
+-->
+<div class="mx-auto max-w-screen-xl">
+
+
+  <main class="lg:relative">
+    <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
+      <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
+        <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
+          О компании
+          <br class="xl:hidden">
+          
+        </h2>
+        <p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
+          Меня зовут Аркадий Гайдаржи, я основатель маркетингового агентства «Бизантиум».
+
+Я работал интернет-маркетологом агентства недвижимости «Атланта», одного из крупнейших в Украине.
+
+В 2018 году с партнерами мы запустили агентство недвижимости «Атлас».
+
+Я хорошо знаю, как привлекать клиентов по недвижимости из интернета, потому что много раз делал это за свой счет для своего агентства.
+
+Вы всегда можете связаться со мной лично по телефону +38 063 774-03-77 или в Telegram и получить консультацию по любому вопросу, связанному с интернет-маркетингом.
+        </p>
+      
+      </div>
+    </div>
+    <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
+      <img class="absolute inset-0 w-full h-full object-cover" src="image/11393033_10206534757.jpg" alt="">
+    </div>
+  </main>
+</div>
+
+
+  <!-- Форма Получить предложение -->
+
+  <div class="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-24">
+    <div class="relative max-w-xl mx-auto">
+     
+    
+      <div class="text-center">
+        <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+          Получить предложение
+        </h2>
+        <p class="mt-4 text-lg leading-6 text-gray-500">
+          Мы подготовим для вас индивидуальное коммерческое предложение после небольшого разговора
+        </p>
+      </div>
+      <div class="sm:col-span-2">
+        <form action="#" method="POST" class="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8">
+
+          <div class="sm:col-span-2">
+            <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Ваше имя
+            </label>
+            <div class="mt-1 relative rounded-md shadow-sm">
+              <input id="first_name" type="email" class="form-input py-3 px-4 block w-full transition ease-in-out duration-150" />
+            </div>
+          </div>
+          
+          <div class="sm:col-span-2">
+            <label for="email" class="block text-sm font-medium leading-5 text-gray-700">Ваш email
+            </label>
+            <div class="mt-1 relative rounded-md shadow-sm">
+              <input id="email" type="email" class="form-input py-3 px-4 block w-full transition ease-in-out duration-150" />
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="phone_number" class="block text-sm font-medium leading-5 text-gray-700">Телефон
+            </label>
+            <div class="mt-1 relative rounded-md shadow-sm">
+              <div class="absolute inset-y-0 left-0 flex items-center">
+                <select aria-label="Country" class="form-select h-full py-0 pl-4 pr-8 border-transparent bg-transparent text-gray-500 transition ease-in-out duration-150">
+                  <option>US
+                  </option>
+                  <option>CA
+                  </option>
+                  <option>EU
+                  </option>
+                </select>
+              </div>
+              <input id="phone_number" class="form-input py-3 px-4 block w-full pl-20 transition ease-in-out duration-150" placeholder="+1 (555) 987-6543" />
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <label for="company" class="block text-sm font-medium leading-5 text-gray-700">Компания
+            </label>
+            <div class="mt-1 relative rounded-md shadow-sm">
+              <input id="company" class="form-input py-3 px-4 block w-full transition ease-in-out duration-150" />
+            </div>
+          </div>
+         
+     
+          
+        
+          <div class="sm:col-span-2">
+            <span class="w-full inline-flex rounded-md shadow-sm">
+              <button type="button" class="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150">
+                Отправить
+              </button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+ 
+
+
+</body>
+<footer>
+  <div class="bg-black">
+    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+      <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+        <div class="xl:col-span-1">
+          <img class="h-10" src="/image//mastercard-logo-visa.png" alt="Company name" />
+          
+          <div class="mt-8 flex">
+            <a href="https://www.facebook.com/byzantiumagency/" class="text-gray-400 hover:text-gray-500">
+              <span class="sr-only">Facebook
+              </span>
+              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+              <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
+                УСЛУГИ
+              </h4>
+              <ul class="mt-4">
+                <li>
+                  <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Застройщикам
+                  </a>
+                </li>
+                <li class="mt-4">
+                  <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Profitbase
+                  </a>
+                </li>
+                <li class="mt-4">
+                  <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Цены
+                  </a>
+                </li>
+               
+              </ul>
+            </div>
+            <div class="mt-12 md:mt-0">
+              <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-400 uppercase">
+                ДЛЯ КЛИЕНТОВ
+              </h4>
+              <ul class="mt-4">
+                <li>
+                  <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Пользовательское соглашение
+                  </a>
+                </li>
+                <li class="mt-4">
+                  <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
+                    Политика конфиденциальности
+                  </a>
+                </li>
+               
+               
+              </ul>
+            </div>
+          </div>
+          <div class="md:grid md:grid-cols-2 md:gap-8">
+            <div>
+             
+            </div>
+            <div class="mt-12 md:mt-0">
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 border-t border-gray-200 pt-8">
+        <p class="text-base leading-6 text-gray-400 xl:text-center">
+          &copy; 2019 ФОП Гайдаржи Аркадій Іванович
+        </p>
+      </div>
+    </div>
+  </div>
+ 
+</footer>
+</html>
+
+
+
+
+
+
+
+  
