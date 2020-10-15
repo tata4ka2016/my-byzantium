@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hello, Tailwind</title>
   <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  
 </head>
 <body class="bg-white-100">
+
+
+
+<!-- Первый экран -->
 
 <!--
   Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
@@ -97,7 +102,7 @@
         <div class="lg:grid lg:grid-cols-12 lg:gap-8">
           <div class="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
             <div>
-              
+             
               <h2 class="mt-4 text-4xl tracking-tight leading-10 font-extrabold text-white sm:mt-5 sm:leading-none sm:text-6xl lg:mt-6 lg:text-5xl xl:text-6xl">
                 Сайт и реклама
                 <br class="hidden md:inline">
@@ -106,67 +111,58 @@
               <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                 Получайте клиентов из интернета с помощью современного сайта и эффективной рекламы. Все инвестиции окупятся всего с одной средней сделки
               </p>
-             
+              
             </div>
           </div>
           <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-span-6">
             <div class="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
               <div class="px-4 py-8 sm:px-10">
-              
+                
 
                 <div class="mt-6 relative">
-                  <div class="absolute inset-0 flex items-center">
-                    <div class="w-full border-t border-gray-300"></div>
-                  </div>
-                  <div class="relative flex justify-center text-sm leading-5">
-                    <span class="px-2 bg-white text-gray-500">
-                      Or
-                    </span>
-                  </div>
+                  <h3 class="flex-1 text-lg leading-7 font-medium">Запланировать звонок</h3>
+                  <p class="text-xs  leading-5 text-gray-500">Примерно 30 минут чтобы узнать детали вашего бизнеса и рассказать о наших пакетах</p>
+                 
                 </div>
 
                 <div class="mt-6">
                   <form action="#" method="POST" class="space-y-6">
                     <div>
-                      <label for="name" class="sr-only">
-                        Full name
-                      </label>
+                      <label for="phone_number" class="block text-sm font-medium leading-5 text-gray-700">Ваше имя</label>
+                      
                       <div class="rounded-md shadow-sm">
-                        <input id="name" placeholder="Full name" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
+                        <input id="name" placeholder="" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
                       </div>
                     </div>
 
                     <div>
-                      <label for="mobile-or-email" class="sr-only">
-                        Mobile number or email
-                      </label>
+                      <label for="phone_number" class="block text-sm font-medium leading-5 text-gray-700">Ваш телефон</label>
+                     
                       <div class="rounded-md shadow-sm">
-                        <input id="mobile-or-email" placeholder="Mobile number or email" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
+                        <input id="mobile-or-email" placeholder="" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
+                      </div>
+                    </div>
+                    <div>
+                      <label for="phone_number" class="block text-sm font-medium leading-5 text-gray-700">Email</label>
+                     
+                      <div class="rounded-md shadow-sm">
+                        <input id="email" placeholder="" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
                       </div>
                     </div>
 
-                    <div>
-                      <label for="password" class="sr-only">
-                        Password
-                      </label>
-                      <div class="rounded-md shadow-sm">
-                        <input id="password" type="password" placeholder="Password" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-out sm:text-sm sm:leading-5">
-                      </div>
-                    </div>
+                  
 
                     <div>
                       <span class="block w-full rounded-md shadow-sm">
                         <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
-                          Create your account
+                          Отправить
                         </button>
                       </span>
                     </div>
                   </form>
                 </div>
               </div>
-              <div class="px-4 py-6 bg-gray-50 border-t-2 border-gray-200 sm:px-10">
-                <p class="text-xs leading-5 text-gray-500">By signing up, you agree to our <a href="#" class="font-medium text-gray-900 hover:underline">Terms</a>, <a href="#" class="font-medium text-gray-900 hover:underline">Data Policy</a> and <a href="#" class="font-medium text-gray-900 hover:underline">Cookies Policy</a>.</p>
-              </div>
+            
             </div>
           </div>
         </div>
@@ -175,12 +171,9 @@
   </div>
 </div>
 
-
 <!-- Наши клиенты из недвижимости -->
 <div class="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-  <div class="absolute inset-0">
-    <div class="bg-white h-1/3 sm:h-2/3"></div>
-  </div>
+  
   <div class="relative max-w-7xl mx-auto ">
     <div class="text-center">
       <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
@@ -193,9 +186,7 @@
   </div>
   </div>
 <div class="mx-auto max-w-screen-xl">
-  <div class="absolute inset-0">
-    <div class="bg-white h-1/3 sm:h-2/3"></div>
-  </div>
+  
   <div class="relative max-w-7xl mx-auto">
   
     <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-4 lg:max-w-none">
@@ -284,11 +275,8 @@
 
 
 <!-- Стоимость пакета -->
-
 <div class="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-  <div class="absolute inset-0">
-    <div class="bg-white h-1/3 sm:h-2/3"></div>
-  </div>
+  
   <div class="relative max-w-7xl mx-auto ">
     <div class="text-center">
       <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
@@ -300,8 +288,10 @@
     
   </div>
   </div>
+
+
   <div class="bg-gray-50">
-    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <div class="max-w-screen-xl mx-auto  px-4 sm:px-6  lg:px-48">
       
       <div class="mt-6 border-t-2 border-gray-200 pt-6">
         <dl>
@@ -400,18 +390,23 @@
     </div>
   </div>
 <!-- Примеры сайтов -->
-
-  <div class="mx-auto max-w-screen-xl">
-    <div class="absolute inset-0">
-      <div class="bg-white h-1/3 sm:h-2/3"></div>
+<div class="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+  
+  <div class="relative max-w-7xl mx-auto ">
+    <div class="text-center">
+      <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
+        Примеры сайтов
+      </h2>
+    
     </div>
+    
+    
+  </div>
+  </div>
+  <div class="mx-auto max-w-screen-xl">
+    
     <div class="relative max-w-7xl mx-auto">
-      <div class="text-center">
-        <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
-          Примеры сайтов
-        </h2>
       
-      </div>
       <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
         <div class="flex flex-col shadow-lg overflow-hidden">
           <div class="flex-shrink-0">
@@ -471,9 +466,9 @@
 
 
   <main class="lg:relative">
-    <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
+    <div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:mt-48 lg:text-left">
       <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
-        <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl lg:text-5xl xl:text-6xl">
+        <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
           О компании
           <br class="xl:hidden">
           
@@ -509,7 +504,7 @@
         <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
           Получить предложение
         </h2>
-        <p class="mt-4 text-lg leading-6 text-gray-500">
+        <p class="mt-4 mb-8 text-lg leading-6 text-gray-500">
           Мы подготовим для вас индивидуальное коммерческое предложение после небольшого разговора
         </p>
       </div>
@@ -537,7 +532,7 @@
             <div class="mt-1 relative rounded-md shadow-sm">
               <div class="absolute inset-y-0 left-0 flex items-center">
                 <select aria-label="Country" class="form-select h-full py-0 pl-4 pr-8 border-transparent bg-transparent text-gray-500 transition ease-in-out duration-150">
-                  <option>US
+                  <option>UA
                   </option>
                   <option>CA
                   </option>
@@ -573,6 +568,61 @@
 
 
  
+
+<!--
+  Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
+  Read the documentation to get started: https://tailwindui.com/documentation
+-->
+<div class="bg-white">
+  <div class="mx-auto py-12 px-4 max-w-screen-xl sm:px-6 lg:px-8 lg:py-24">
+    <div class="space-y-12">
+      <div class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
+        <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">Our Team</h2>
+        <p class="text-xl leading-7 text-gray-500">Odio nisi, lectus dis nulla. Ultrices maecenas vitae rutrum dolor ultricies donec risus sodales. Tempus quis et.</p>
+      </div>
+      <ul class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
+        <li>
+          <div class="space-y-4">
+            <div class="relative pb-2/3">
+              <img class="absolute object-cover h-full w-full shadow-lg rounded-lg" src="image/atlas-site.png" alt="">
+            </div>
+
+            <div class="space-y-2">
+              <div class="text-lg leading-6 font-medium space-y-1">
+                <h4>Lindsay Walton</h4>
+                <p class="text-indigo-600">Front-end Developer</p>
+              </div>
+              <ul class="flex space-x-5">
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-gray-500 transition ease-in-out duration-150">
+                    <span class="sr-only">Twitter</span>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-400 hover:text-gray-500 transition ease-in-out duration-150">
+                    <span class="sr-only">LinkedIn</span>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- More people... -->
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+  
 
 
 </body>
