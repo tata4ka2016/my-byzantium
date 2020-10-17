@@ -2,5 +2,8 @@
 .max-h-12 {
     max-height: 3rem;
 }
+max-h-64{
+    max-height: 16rem;
+}
 @tailwind components;
 @tailwind utilities;
