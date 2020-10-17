@@ -3,5 +3,8 @@
 .max-h-64{
     max-height: 16rem;
 }
+.h-160px{
+    height: 360px;
+}
 @tailwind components;
 @tailwind utilities;
