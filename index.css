@@ -4,7 +4,7 @@
     max-height: 16rem;
 }
 .h-160px{
-    height: 360px;
+    height: 350px;
 }
 @tailwind components;
 @tailwind utilities;
