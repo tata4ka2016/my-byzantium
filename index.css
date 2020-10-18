@@ -6,7 +6,7 @@
 .h-160px{
     height: 350px;
 }
-h-300px{
+.h-300px{
     height: 300px;
 }
 @tailwind components;
